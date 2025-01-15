@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Toolkit</title>
+    <style>
+      .cont {
+        margin: 250px 250px;
+      }
+      .b {
+        border: none;
+        padding: 10px 25px;
+        background-color: rgb(5, 75, 75);
+        color: white;
+        border-radius: 20px;
+        margin-right: 30px;
+        position: relative;
+      }
+      .innerr {
+        visibility: hidden;
+        min-width: 100px;
+        background-color: green;
+        color: black;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: 50%; /* Adjust tooltip position */
+        left: 105%;
+        /* transform: translateY(-50%); */
+      }
+      .innerl {
+        visibility: hidden;
+        min-width: 100px;
+        background-color: green;
+        color: black;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -50%; /* Adjust tooltip position */
+        left: -105%;
+        /* transform: translateY(-50%); */
+      }
+      .innerb {
+        visibility: hidden;
+        min-width: 100px;
+        background-color: green;
+        color: black;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: 100%; /* Adjust tooltip position */
+        left: 10%;
+        /* transform: translateY(-50%); */
+      }
+      .innert {
+        visibility: hidden;
+        min-width: 100px;
+        background-color: green;
+        color: black;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -100%; /* Adjust tooltip position */
+        left: 10%;
+        /* transform: translateY(-50%); */
+      }
+      .b:hover .innerr {
+        visibility: visible;
+      }
+      .b:hover .innerl {
+        visibility: visible;
+      }
+      .b:hover .innert {
+        visibility: visible;
+      }
+      .b:hover .innerb {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <button class="b left">
+        Left
+        <span class="innerl">Left Tooltip</span>
+      </button>
+      <button class="b top">
+        Top
+        <span class="innert">top Tooltip</span>
+      </button>
+      <button class="b bottom">
+        Bottom
+        <span class="innerb">bottom Tooltip</span>
+      </button>
+      <button class="b right">
+        Right
+        <span class="innerr">Right Tooltip</span>
+      </button>
+    </div>
+  </body>
+</html>
