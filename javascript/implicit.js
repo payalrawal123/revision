@@ -29,3 +29,25 @@ const result = people.map(
 );
 
 console.log(result);
+
+
+
+// globle execution 
+
+// Step 1: Declare a global variable
+let age = 25;
+
+// Step 2: Function to display the value of age
+function displayAge() {
+  console.log("Current age is:", age);
+}
+
+// Step 3: Function to change the value of age
+function changeAge() {
+  age = 30;
+  console.log("Updated age is:", age);
+}
+
+// Step 4: Call the functions
+displayAge();  // Output: Current age is: 25
+changeAge();   // Output: Updated age is: 30
